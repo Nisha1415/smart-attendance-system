@@ -1,6 +1,7 @@
 **Application Setup Steps**
 
-**Prerequisites**
+**Prerequisites:**
+
 Make sure the following are installed on your system:
 Node.js (v16 or above)
 npm
