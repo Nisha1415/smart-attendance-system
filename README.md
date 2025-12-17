@@ -47,6 +47,7 @@ This logic ensures duplicate attendance entries are strictly prevented.
 
 **Project Folder Structure**
 
+```text
 smart-attendance-system/
 │
 ├── backend/
@@ -56,10 +57,10 @@ smart-attendance-system/
 │   │
 │   ├── routes/
 │   │   ├── auth.js            # Login & user creation APIs
-│   │   └── attendance.js      # Attendance APIs
+│   │   └── attendance.js     # Attendance APIs
 │   │
-│   ├── server.js              # Express server entry point
-│   └── package.json           # Backend dependencies
+│   ├── server.js             # Express server entry point
+│   └── package.json          # Backend dependencies
 │
 ├── frontend/
 │   ├── src/
@@ -73,5 +74,4 @@ smart-attendance-system/
 │   └── package.json           # Frontend dependencies
 │
 └── README.md                  # Project documentation
-
 
