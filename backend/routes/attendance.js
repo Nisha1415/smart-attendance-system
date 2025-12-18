@@ -9,7 +9,7 @@ const router = express.Router();
 router.post('/mark', async (req, res) => {
   try {
     const token = req.headers.authorization;
-    const decoded = jwt.verify(token, 'SECRET_KEY');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     if (decoded.role !== 'user') {
       return res.status(403).json({ message: 'Only users can mark attendance' });
@@ -44,7 +44,7 @@ router.post('/mark', async (req, res) => {
 router.get('/history', async (req, res) => {
   try {
     const token = req.headers.authorization;
-    const decoded = jwt.verify(token, 'SECRET_KEY');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     const records = await Attendance.find({
       userId: decoded.userId
@@ -60,7 +60,7 @@ router.get('/history', async (req, res) => {
 router.get('/all', async (req, res) => {
   try {
     const token = req.headers.authorization;
-    const decoded = jwt.verify(token, 'SECRET_KEY');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // admin-only access
     if (decoded.role !== 'admin') {

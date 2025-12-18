@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
     // Generate JWT token
     const token = jwt.sign(
       { userId: user._id, role: user.role },
-      'SECRET_KEY',
+      process.env.JWT_SECRET,
       { expiresIn: '1d' }
     );
 
@@ -76,7 +76,7 @@ router.post('/admin-login', async (req, res) => {
     // Generate JWT token
     const token = jwt.sign(
       { userId: admin._id, role: admin.role },
-      'SECRET_KEY',
+      process.env.JWT_SECRET,
       { expiresIn: '1d' }
     );
 
@@ -101,7 +101,7 @@ router.post('/create-user', async (req, res) => {
       return res.status(401).json({ message: 'No token provided' });
     }
 
-    const decoded = jwt.verify(token, 'SECRET_KEY');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // Allow ONLY admin
     if (decoded.role !== 'admin') {
