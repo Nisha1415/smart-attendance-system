@@ -37,7 +37,7 @@ Git
    http://localhost:3000
 
 
-**Attendance Validation Logic**
+## Attendance Validation Logic
 The attendance validation is handled at the backend level to ensure data integrity.
 
 Business Rule:
@@ -71,7 +71,7 @@ Email: user@example.com
 Password: user123
 
 
-**Project Folder Structure**
+## Project Folder Structure
 
 ```text
 smart-attendance-system/
