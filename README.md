@@ -49,11 +49,13 @@ This logic ensures duplicate attendance entries are strictly prevented.
 **Demo Login Credentials**
 
 **Admin Login**
+
 Use the following credentials to log in as Admin:
 Email: admin@example.com
 Password: admin123
 
 **User Login**
+
 Use the following credentials to log in as a User:
 Email: user@example.com
 Password: user123
