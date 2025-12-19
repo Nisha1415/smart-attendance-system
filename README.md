@@ -54,7 +54,7 @@ A user can mark attendance only once per day
 This logic ensures duplicate attendance entries are strictly prevented.
 
 
-**Demo Login Credentials**
+## Demo Login Credentials
 
 **Admin Login**
 
